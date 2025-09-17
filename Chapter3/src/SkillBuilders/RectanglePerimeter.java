@@ -8,10 +8,9 @@ public class RectanglePerimeter {
 		int width = 4;
         int length = 13;
         
+        // Find and print the perimeter
         int perimeter = 2 * width + 2 * length;
-        
-        System.out.print("The perimeter of the rectangle is: "+ perimeter);
-        
+        System.out.print("The perimeter of the rectangle is: "+ perimeter); 
 	}
 
 }
