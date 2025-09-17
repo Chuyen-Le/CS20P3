@@ -20,8 +20,8 @@ public class GradeAvg {
 			Sum += grade;
 			NumberOfGrade++;
 		}
+		// Find and print the average
 		double average = (double)Sum / NumberOfGrade;
-		// Print the average
 		System.out.printf("The average of the grades: %.2f%%", average);
 	}
 
