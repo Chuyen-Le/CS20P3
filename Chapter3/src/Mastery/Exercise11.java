@@ -7,6 +7,7 @@ public class Exercise11 {
 	public static void main(String[] args) 
 	{
 		// Question a
+		
 		// Ask the user how many burgers, fries and sodas they want
 		Scanner scanner1 = new Scanner(System.in);
 		System.out.print("Enter the number of burgers: ");
@@ -33,6 +34,7 @@ public class Exercise11 {
 		
 		
 		// Question b
+		
 		// The amount tendered
 		Scanner scanner4 = new Scanner(System.in);
 		System.out.print("Enter amount tendered: $");
