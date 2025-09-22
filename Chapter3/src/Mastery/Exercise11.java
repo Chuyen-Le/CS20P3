@@ -20,7 +20,7 @@ public class Exercise11 {
 		System.out.print("Enter the number of sodas: ");
 		int NumberOfSodas = scanner.nextInt();
 		
-		//Find the sum
+		//Find the
 		double Sum = 1.69*NumberOfBurgers + 1.09*NumberOfFries + 0.99*NumberOfSodas;
 		
 		// Find and print the total, tax and the final cost
