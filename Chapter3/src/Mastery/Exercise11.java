@@ -6,27 +6,26 @@ public class Exercise11 {
 
 	public static void main(String[] args) 
 	{
+		Scanner scanner = new Scanner(System.in);
+		
 		// Question a
 		
 		// Ask the user how many burgers, fries and sodas they want
-		Scanner scanner1 = new Scanner(System.in);
 		System.out.print("Enter the number of burgers: ");
-		int NumberOfBurgers = scanner1.nextInt();
+		int NumberOfBurgers = scanner.nextInt();
 		
-		Scanner scanner2 = new Scanner(System.in);
 		System.out.print("Enter the number of fries: ");
-		int NumberOfFries = scanner2.nextInt();
+		int NumberOfFries = scanner.nextInt();
 	
-		Scanner scanner3 = new Scanner(System.in);
 		System.out.print("Enter the number of sodas: ");
-		int NumberOfSodas = scanner3.nextInt();
+		int NumberOfSodas = scanner.nextInt();
 		
 		//Find the sum
-		float Sum = (float)(1.69*NumberOfBurgers + 1.09*NumberOfFries + 0.99*NumberOfSodas);
+		double Sum = 1.69*NumberOfBurgers + 1.09*NumberOfFries + 0.99*NumberOfSodas;
 		
 		// Find and print the total, tax and the final cost
-		float Tax = (float)(Sum*0.065);
-		float FinalCost = (float)(Sum*1.065);
+		double Tax = Sum*0.065;
+		double FinalCost = Sum*1.065;
 		
 		System.out.printf("Total before tax: $%.2f%n", Sum);
 		System.out.printf("Tax: $%.2f%n", Tax);
@@ -35,13 +34,12 @@ public class Exercise11 {
 		
 		// Question b
 		
-		// The amount tendered
-		Scanner scanner4 = new Scanner(System.in);
-		System.out.print("Enter amount tendered: $");
-		int AmountTendered = scanner4.nextInt();
+		// Ask about the amount tendered
+		System.out.print("\nEnter amount tendered: $");
+		double AmountTendered = scanner.nextInt();
 		
 		// Find and print the change
-		float Change = (float)(AmountTendered - FinalCost);
+		double Change = AmountTendered - FinalCost;
 		System.out.printf("Change: $%.2f%n", Change);
 	}
 
