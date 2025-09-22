@@ -13,7 +13,7 @@ public class GradeAvg {
 		// Ask user to enter 5 grades 
 		while (NumberOfGrade < 5) {
 			Scanner scanner = new Scanner(System.in);
-			System.out.print("Enter the " + (NumberOfGrade + 1) + " grade: ");
+			System.out.print("Enter the grade " + (NumberOfGrade + 1) + ": " );
 			int grade = scanner.nextInt();
 			
 			// Find sum of 5 grades
