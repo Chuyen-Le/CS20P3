@@ -15,7 +15,7 @@ public class PerfectSquare {
 		// Case 1: Integer < 0
 		if (Integer < 0) 
 			System.out.print(Integer + " is not a perfect square");
-		
+			
 		// Case 2: Integer >= 0
 		long RoundSquareRoot = (long)Math.sqrt(Integer);
 		double NewInteger = Math.pow(RoundSquareRoot, 2); 
