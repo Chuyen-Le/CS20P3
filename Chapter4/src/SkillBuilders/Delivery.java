@@ -18,7 +18,8 @@ public class Delivery
 		
 		System.out.print("What is the height of your package: ");
 		double height = scanner.nextDouble();
-
+		
+		// Check if the dimensions are valid 
 		if (length <= 10 && width <= 10 && height <= 10) {
 			System.out.print("Accept");
 		} else {
