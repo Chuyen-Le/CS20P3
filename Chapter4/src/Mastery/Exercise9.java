@@ -11,7 +11,7 @@ public class Exercise9
 	{
 		// Setting the guessing game
 		Random r = new Random();
-		int ComputerNum = r.nextInt(20) + 1;              // Range of random number: [1,20]
+		int ComputerNum = r.nextInt(20) + 1;           // Range of random number: [1,20]
 		
 		Scanner scanner = new Scanner(System.in);
 		System.out.print("Enter a number between 1 and 20: ");
