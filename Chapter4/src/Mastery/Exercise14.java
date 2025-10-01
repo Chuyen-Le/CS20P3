@@ -22,7 +22,7 @@ public class Exercise14
 		
 		// Calculate final bacteria amount
 		double FinalAmount = InitialAmount * Math.exp(k * hours);
-		String formattedFinalAmount = String.format("%.1f", FinalAmount);
+		String formattedFinalAmount = String.format("%.1f", FinalAmount);       // format the Final Amount to get the 1 decimal place number
 		System.out.print(formattedFinalAmount + " bacteria will be present after " + hours + "hours.");
 	}
 
