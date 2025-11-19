@@ -19,9 +19,9 @@ public class Exercise7
 	public static void main(String[] args) 
 	{
 		System.out.println("Perfect numbers up to 100 are:");
-		for (int i = 1; i <= 100; i++) 
+		for (int i = 1; i <= 100; i++) 					// Check the integers from 1 to 100
 		{
-			if (isPerfect(i)) 
+			if (isPerfect(i)) 							// If true, print the number
 			{
 				System.out.println(i);
 			}
