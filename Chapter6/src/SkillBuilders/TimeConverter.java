@@ -56,7 +56,7 @@ public class TimeConverter
 		System.out.println("4. Time convert from hour to day");
 		
 		Scanner scanner = new Scanner(System.in);
-		System.out.print("Which time convertor you want (1, 2, 3, 4): ");
+		System.out.print("Which time convertor do you want (1, 2, 3, 4): ");
 		int answer = scanner.nextInt(); 
 		
 		if (answer == 1)
