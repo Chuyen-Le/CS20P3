@@ -14,23 +14,28 @@ package Mastery;
 
 public class Exercise7 
 {
-	// Method that returns true if n is a perfect number
+	// Method that determine if a number is a perfect number
 	public static boolean isPerfect(int number) 
 	{
 		int sum = 0;
-		for (int count = 1; count < number; count++) 
+		
+		double maxDivisor = Math.ceil(number / 2);				// To reduce the loop's execution times
+		
+		for (int count = 1; count <= maxDivisor; count++) 
 		{ 
 			if (number % count == 0) 
 			{
 				sum += count;
 			}
 		}
+		
 		return sum == number;
 	}
 
 	public static void main(String[] args) 
 	{
 		System.out.println("Perfect numbers up to 100 are:");
+		
 		for (int i = 1; i <= 100; i++) 					        // Check the integers from 1 to 100
 		{
 			if (isPerfect(i)) 							        // If true, print the number
@@ -39,7 +44,6 @@ public class Exercise7
 			}
 		}
 	}
-	
 }
 
 // Test case 
