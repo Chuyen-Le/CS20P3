@@ -4,10 +4,10 @@ public class SpanishNumbers
 {
 	public static void SpanishNumber(int number) 
 	{
-		// A string of Spanish numbers
+		// A string for numbers in Spanish
 		String[] spanishNum = {"uno", "dos", "tres", "cuatro", "cinco", "seis", "siete", "ocho", "nueve", "diez"};
 	
-		// For each number, add the Spanish word of that number
+		// For each number, add a Spanish word after that number
 		System.out.println(number + " - " + spanishNum[number - 1]);
 	}
 	
