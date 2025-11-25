@@ -6,8 +6,8 @@ public class TestRectangle
 	{
 		// Rectangle 1
 		Rectangle spot1 = new Rectangle();
-		spot1.setLength(3);
-		spot1.setWidth(2.5);
+		spot1.setLength(4);
+		spot1.setWidth(1.5);
 		System.out.println("Rectangle length: " + spot1.getLength());
 		System.out.println("Rectangle width: " + spot1.getWidth());
 		System.out.println("Rectangle perimeter: " + spot1.perimeter());
@@ -25,7 +25,7 @@ public class TestRectangle
 		System.out.println("Rectangle perimeter: " + spot2.perimeter());
 		System.out.println("Rectangle area: " + spot2.displayAreaFormula() + " = " + spot2.area());
 		
-		// A line between 2 rectangles
+		// A line between rectangle and comparison
 		System.out.println();
 		
 		// Compare 2 rectangles

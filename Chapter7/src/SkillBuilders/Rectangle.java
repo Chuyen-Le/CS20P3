@@ -2,22 +2,14 @@ package SkillBuilders;
 
 public class Rectangle 
 {
+	// Primary setting
 	private double length, width;
 	
-	
-	// Primary setting
 	public Rectangle() 
 	{
 		length = 1;
 		width = 1;
 	}
-	
-	public Rectangle(double l, double w)
-	{
-		length = l;
-		width = w;
-	}
-	
 	
 	// Set length and width
 	public void setLength(double newLength)
@@ -29,7 +21,6 @@ public class Rectangle
 	{
 		width = newWidth;
 	}
-	
 	
 	// Main methods 
 	public double perimeter()
@@ -53,9 +44,9 @@ public class Rectangle
 		return(length + " x " + width);
 	}
 	
-	public boolean equals(Object Spot2)
+	public boolean equals(Object Rec2)
 	{
-		Rectangle test = (Rectangle)Spot2;
+		Rectangle test = (Rectangle)Rec2;
 		
 		if (test.getLength() == length && test.getWidth() == width)
 		{
@@ -75,7 +66,6 @@ public class Rectangle
 		return(rectangleString);
 	}
 	
-	
 	// Return length, width
 	public double getLength()
 	{
@@ -86,5 +76,4 @@ public class Rectangle
 	{
 		return width;
 	}
-
 }
