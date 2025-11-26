@@ -33,14 +33,14 @@ public class Ch31
 		int numberOfItem = food.length;
 		
 		Scanner scanner = new Scanner(System.in);
-		for (int i = 1; i <= numberOfItem; i++)
+		for (int i = 0; i < numberOfItem; i++)
 		{
-			System.out.print("Enter number of " + food[i - 1] + ": ");
+			System.out.print("Enter number of " + food[i] + ": ");
 			int numberofOrder = scanner.nextInt();
 			
-			System.out.print(foodInfo(food[i - 1], fat[i - 1], carbs[i - 1], fiber[i - 1]) + "\n\n");
+			System.out.print(foodInfo(food[i], fat[i], carbs[i], fiber[i]) + "\n\n");
 			
-			total += price(numberofOrder, price[i - 1]);
+			total += price(numberofOrder, price[i]);
 		}
 		scanner.close();
 		
