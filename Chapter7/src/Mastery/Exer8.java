@@ -90,7 +90,7 @@ public class Exer8
 	}
 }
 
-
+// Test case
 /*
 
 18 + 1 = 19
