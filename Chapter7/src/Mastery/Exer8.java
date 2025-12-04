@@ -14,7 +14,6 @@ the player receives no points and the correct answer is displayed. The game cont
 
 */
 
-
 package Mastery;
 
 import java.util.Scanner;
@@ -30,7 +29,7 @@ class Adder
         this.num2 = num2;
     }
 	
-	public int getFinalNum()
+	public int getSum()
 	{
 		return num1 + num2;
 	}
@@ -73,7 +72,7 @@ public class Exer8
                     scanner.close();
                     return;             
 	            }
-				else if (answer == number.getFinalNum())
+				else if (answer == number.getSum())
 				{
 					score += i;
 					correct = true;
@@ -86,7 +85,19 @@ public class Exer8
 		        continue;   
 		    }
 			
-			System.out.println("Wrong answer. Enter another answer: " + number.getFinalNum());
+			System.out.println("Wrong answer. Enter another answer: " + number.getSum());
 		}
 	}
 }
+
+//Test case
+/*
+
+18 + 1 = 19
+0 + 7 = 0
+0 + 7 = 7
+20 + 7 = 27
+14 + 5 = 999
+Your score is: 13
+
+*/
