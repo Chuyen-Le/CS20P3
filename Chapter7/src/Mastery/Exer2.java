@@ -14,7 +14,7 @@ package Mastery;
 
 import java.util.Scanner;
 
-// Background
+
 class Num															
 {
 	private int answer; 
@@ -46,27 +46,18 @@ class Num
 }
 
 
-// Main
 public class Exer2 
 {
 	public static void main(String[] args) 
 	{
 		Scanner scanner = new Scanner(System.in);
-		int answer = 0;
 		
-		System.out.print("Enter an integer: ");					// check if the user enters a number
-		if (scanner.hasNextInt())
-		{
-			answer = scanner.nextInt();
-		}
-		else
-		{
-			System.out.println("Sorry, Please try again");
-			return;
-		}
+		System.out.print("Enter an integer: ");	
+		int answer = scanner.nextInt();
 		
-		while (true)
+		while (true)								// continue the loop until user quits
 		{
+			// prompt out options
 			System.out.println("show (W)hole number");
 			System.out.println("show (O)nes number");
 			System.out.println("show (T)ens number");
@@ -74,13 +65,13 @@ public class Exer2
 			System.out.println("(Q)uit");
 			
 			System.out.print("Enter your choice: ");
-			String choice = scanner.next().toUpperCase();		// upper case letter to reduce the amount of cases we should check
+			String choice = scanner.next().toUpperCase();		// upper case letter to reduce the amount of cases we check
 			
 			Num number = new Num(answer);
 			
-			if (choice.equals("Q"))
+			if (choice.equals("Q"))								// the "break" will exit the while loop 
 			{
-				break;
+				break;	
 			}
 			else if (choice.equals("W"))						// case: whole number
 			{
@@ -99,10 +90,11 @@ public class Exer2
 				System.out.println(number.getHundred());
 			}
 			else 												// case: the user enters an invalid letter 
-			{
+			{													
 				System.out.println("Sorry, please try again");
 			}
 			
+			// after all, it will return the start of the while loop (except for "Q)
 			System.out.println();								// make a blank line  
 		}
 		scanner.close(); 	
@@ -111,7 +103,6 @@ public class Exer2
 
 // Test case
 /*
-
 Enter an integer: 562
 show (W)hole number
 show (O)nes number
@@ -143,6 +134,5 @@ show (T)ens number
 show (H)undreds number
 (Q)uit
 Enter your choice: q
-
 */
 
