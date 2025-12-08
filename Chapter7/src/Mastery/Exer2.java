@@ -65,7 +65,7 @@ public class Exer2
 			System.out.println("(Q)uit");
 			
 			System.out.print("Enter your choice: ");
-			String choice = scanner.next().toUpperCase();		// upper case letter to reduce the amount of cases we check
+			String choice = scanner.next().toUpperCase();		// upper case letter to reduce the number of cases we check
 			
 			Num number = new Num(answer);
 			
@@ -94,9 +94,9 @@ public class Exer2
 				System.out.println("Sorry, please try again");
 			}
 			
-			// after all, it will return the start of the while loop (except for "Q)
 			System.out.println();								// make a blank line  
 		}
+		
 		scanner.close(); 	
 	}	
 }

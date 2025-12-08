@@ -86,7 +86,7 @@ public class Exer8
 		    }
 			
 			// after the for loop, if user can't not answer question and doesn't want to leave
-			// so the "correct" is false, it won't return right away and print out the below line
+			// so the "correct" is still false, it won't return right away and print out the below line
 			// then return to the start of the while loop
 			System.out.println("Wrong answer. Enter another answer: " + number.getSum());
 		}
