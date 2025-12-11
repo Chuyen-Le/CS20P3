@@ -1,6 +1,7 @@
 package Mastery;
 
 import java.util.Scanner;
+import java.util.Arrays;
 
 public class e14 
 {
@@ -10,23 +11,53 @@ public class e14
 		Scanner scanner = new Scanner(System.in);
 		
 		int size = 5;
-		
-		String[] array1 = new String[size];
-		
-		System.out.println("What is your table? ");
-		
-		for (int i = 0; i < size; i++)
+
+		char[][] grid = new char[size][size];
+
+		for (int row = 0; row < size; row++) 
 		{
-			array1[i] = scanner.nextLine();
+		    String line = scanner.nextLine(); 
+		    grid[row] = line.toCharArray();   
 		}
 		
-		for (String letter: array1) 
-		{
-            System.out.println(letter);
-        }
-		
-		
+		char[][] newGrid = Arrays.copyOf(grid, size);
+	
 		scanner.close();
+		
+		for (int r = 1; r < size - 1; r++) 
+		{
+		    for (int c = 1; c < size - 1; c++) 
+		    {
+		    	if (grid[r][c] == 'X')
+		    	{
+		    		int count = 0;
+		    		for (int i = -1; i <= 1; i++) {
+		    			for (int j = -1; i <= 1; i++) {
+		    				if (grid[r+i][c+j] == 'X') {
+		    					count += 1;
+		    				}
+		    			}
+		    		}
+		    		
+		    		if (count < 3){
+		    			newGrid[r][c] = '0';
+		    		} else {
+		    			newGrid[r][c] = 'X';
+		    		}
+		    	}
+		    }
+		}
+		
+		for (int r = 0; r < size; r++) 
+		{
+		    for (int c = 0; c < size; c++) 
+		    {
+		    	System.out.print(newGrid[r][c]);
+		    }
+		    System.out.println();
+		}
+		
+		
 		
 	}
 
