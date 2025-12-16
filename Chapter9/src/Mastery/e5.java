@@ -110,7 +110,7 @@ public class e5
 	}
 }
 
-//Test case
+//Test 
 /*
 Enter the number of pegs <1-10>: 3
 Enter the number of colors <1-9>: 5
