@@ -20,11 +20,16 @@ public class Delivery
 		double height = scanner.nextDouble();
 		
 		// Check if the dimensions are valid 
-		if (length <= 10 && width <= 10 && height <= 10) {
+		if (length <= 10 && width <= 10 && height <= 10) 
+		{
 			System.out.print("Accept");
-		} else {
+		} 
+		else 
+		{
 			System.out.print("Reject");
 		}
+		
+		scanner.close();
 	}
 
 }

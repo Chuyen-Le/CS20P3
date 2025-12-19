@@ -3,10 +3,8 @@ package Mastery;
 import java.util.Random;
 import java.util.Scanner;
 
-
 public class Exercise9 
 {
-
 	public static void main(String[] args) 
 	{
 		// Setting the guessing game
@@ -21,11 +19,15 @@ public class Exercise9
 		System.out.println("Computer's number: " + ComputerNum);
 		System.out.println("Player's number: " + PlayerNum);
 		
-		if (ComputerNum == PlayerNum) {
+		if (ComputerNum == PlayerNum) 
+		{
 			System.out.print("You won!");
-		} else {
+		} 
+		else 
+		{
 			System.out.print("Better luck next time");
 		}
+		
+		scanner.close();
 	}
-
 }

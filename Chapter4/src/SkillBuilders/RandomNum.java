@@ -8,7 +8,7 @@ public class RandomNum
 
 	public static void main(String[] args) 
 	{
-		// Ask the user prompts 2 numbers
+		// Ask the user to prompt 2 numbers
 		Scanner scanner = new Scanner(System.in);
 		
 		System.out.print("Enter a number: ");
@@ -21,6 +21,8 @@ public class RandomNum
 		Random r = new Random();
 		int RandomNum = r.nextInt(Maximum - Minimum + 1) + Minimum;
 		System.out.print("A random number between " + Minimum + " and " + Maximum + ": " + RandomNum);
+		
+		scanner.close();
 	}
 
 }

@@ -5,7 +5,6 @@ import java.lang.Math;
 
 public class Exercise14 
 {
-
 	public static void main(String[] args) 
 	{
 		// Ask the user about data
@@ -22,8 +21,11 @@ public class Exercise14
 		
 		// Calculate final bacteria amount
 		double FinalAmount = InitialAmount * Math.exp(k * hours);
-		String formattedFinalAmount = String.format("%.1f", FinalAmount);       // format the Final Amount to get the 1 decimal place number
-		System.out.print(formattedFinalAmount + " bacteria will be present after " + hours + "hours.");
+		
+		// Format the Final Amount to get the 1 decimal place number
+		String formattedFinalAmount = String.format("%.1f", FinalAmount);       
+		System.out.print(formattedFinalAmount + " bacteria will be present after " + hours + " hours.");
+		
+		scanner.close();
 	}
-
 }

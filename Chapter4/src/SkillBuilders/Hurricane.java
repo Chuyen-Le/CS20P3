@@ -20,6 +20,8 @@ public class Hurricane
 		case 4: System.out.print("Catagory " + HurricaneCategory + ": 131-155 mph or 114-135 kt or 210-249 km/hr");
 		case 5: System.out.print("Catagory " + HurricaneCategory + ": greater than 155 mph or 135 kt or 249 km/hr");
 		}
+		
+		scanner.close();
 	}
 
 }

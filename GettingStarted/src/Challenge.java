@@ -60,7 +60,7 @@ public class Challenge
         DigitalInput greenButton = new DigitalInput();
         DigitalOutput greenLED = new DigitalOutput();
 
-      //Address | Address your four objects which lets your program know where to find them.
+        //Address | Address your four objects which lets your program know where to find them.
         redButton.setHubPort(0);
         redButton.setIsHubPortDevice(true);
         redLED.setHubPort(1);

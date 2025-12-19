@@ -17,15 +17,19 @@ public class PerfectSquare {
 			System.out.print(Integer + " is not a perfect square");
 			
 		// Case 2: Integer >= 0
-		long RoundSquareRoot = (long)Math.sqrt(Integer);
-		double NewInteger = Math.pow(RoundSquareRoot, 2); 
+		long IntSqRt = (long) Math.sqrt(Integer);
 		
 		// if the square of the round square root is equal the initial integer, then it is true
-		if (Integer == NewInteger) { 			
+		if (Integer == IntSqRt * IntSqRt) 
+		{ 			
 			System.out.print(Integer + " is a perfect square");
-		} else {
+		} 
+		else 
+		{
 			System.out.print(Integer + " is not a perfect square");
 		}
+		
+		scanner.close();
 	}
 
 }

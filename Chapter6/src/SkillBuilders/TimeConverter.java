@@ -13,6 +13,8 @@ public class TimeConverter
 		double minute = hour * 60;
 		
 		System.out.print("The total of minutes is " + minute);
+		
+		scanner.close();
 	}
 	
 	public static void DayToHour()
@@ -24,6 +26,8 @@ public class TimeConverter
 		double hour = day * 24;
 		
 		System.out.print("The total of hours is " + hour);
+		
+		scanner.close();
 	}
 	
 	public static void MinuteToHour()
@@ -35,6 +39,8 @@ public class TimeConverter
 		double hour = minute / 60;
 		
 		System.out.print("The total of hours is " + hour);
+		
+		scanner.close();
 	}
 	
 	public static void HourToDay()
@@ -46,6 +52,8 @@ public class TimeConverter
 		double day = hour / 24;
 		
 		System.out.print("The total of days is " + day);
+		
+		scanner.close();
 	}
 
 	public static void main(String[] args) 
@@ -59,21 +67,20 @@ public class TimeConverter
 		System.out.print("Which time convertor do you want (1, 2, 3, 4): ");
 		int answer = scanner.nextInt(); 
 		
-		if (answer == 1)
+		switch (answer)
 		{
+		case 1: 
 			HourToMinute();
-		}
-		else if (answer == 2)
-		{
+			break;
+		case 2: 
 			DayToHour();
-		}
-		else if (answer == 3)
-		{
+			break;
+		case 3: 
 			MinuteToHour();
+			break;
+		case 4: HourToDay();
 		}
-		else if (answer == 4)
-		{
-			HourToDay();
-		}
+		
+		scanner.close();
 	}
 }
