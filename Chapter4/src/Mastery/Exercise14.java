@@ -7,7 +7,7 @@ public class Exercise14
 {
 	public static void main(String[] args) 
 	{
-		// Ask the user about dat
+		// Ask the user about data
 		Scanner scanner = new Scanner(System.in);
 		
 		System.out.print("Enter initial bacteria amount: ");			// The number of initial bacteria

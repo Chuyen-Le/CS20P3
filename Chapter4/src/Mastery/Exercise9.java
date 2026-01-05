@@ -7,7 +7,7 @@ public class Exercise9
 {
 	public static void main(String[] args) 
 	{
-		// Setting the guessing gam
+		// Setting the guessing game
 		Random r = new Random();
 		int ComputerNum = r.nextInt(20) + 1;           // Range of random number: [1,20]
 		

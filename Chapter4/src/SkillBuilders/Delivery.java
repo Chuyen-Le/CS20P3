@@ -6,7 +6,7 @@ public class Delivery
 {
 	public static void main(String[] args) 
 	{
-		// Ask the user about the size of a packag
+		// Ask the user about the size of a package
 		Scanner scanner = new Scanner(System.in);
 		
 		System.out.print("What is the length of your package: ");
