@@ -6,7 +6,7 @@ public class Hurricane
 {
 	public static void main(String[] args) 
 	{
-		// Ask the user about the hurricane category
+		// Ask the user about the hurricane categor
 		Scanner scanner = new Scanner(System.in);
 		System.out.print("Enter the hurricane category (1-5): ");
 		int HurricaneCategory = scanner.nextInt();

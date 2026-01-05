@@ -7,7 +7,7 @@ public class PerfectSquare
 {
 	public static void main(String[] args) 
 	{
-		// Ask the user for an integer 
+		// Ask the user for an intege 
 		Scanner scanner = new Scanner(System.in);
 		System.out.print("Enter an integer: ");
 		int Integer = scanner.nextInt();
