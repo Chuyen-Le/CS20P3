@@ -9,7 +9,7 @@ Every time the user presses the red button, decrease the set temperature by 1˚.
 Print the current temperature and set temperature to the screen every 10 seconds.
 If the current temperature is within 2˚ of the set temperature, turn on the green LED.
 If the current temperature is not within 2˚ of the set temperature, turn on the red LED.
- */
+ 
 
 //Add Phidgets Library | You added a file called phidget22 when configuring your project. Import gives you access to the Phidgets library code inside that file. 
 
@@ -73,5 +73,6 @@ public class BuildAThermostat
         }
     }
 }
+*/
   
   

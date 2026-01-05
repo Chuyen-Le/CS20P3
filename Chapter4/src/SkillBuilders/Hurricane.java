@@ -4,7 +4,6 @@ import java.util.Scanner;
 
 public class Hurricane 
 {
-
 	public static void main(String[] args) 
 	{
 		// Ask the user about the hurricane category
@@ -12,6 +11,7 @@ public class Hurricane
 		System.out.print("Enter the hurricane category (1-5): ");
 		int HurricaneCategory = scanner.nextInt();
 		
+		// Prompt out the  hurricane catagory's information
 		switch (HurricaneCategory) 
 		{
 		case 1: System.out.print("Catagory " + HurricaneCategory + ": 74-95 mph or 64-82 kt or 119-153 km/hr");
@@ -23,5 +23,4 @@ public class Hurricane
 		
 		scanner.close();
 	}
-
 }

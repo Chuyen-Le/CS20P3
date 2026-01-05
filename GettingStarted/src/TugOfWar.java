@@ -41,7 +41,6 @@ public class TugOfWar
             boolean currentRedState = redButton.getState();
             boolean currentGreenState = greenButton.getState();
 
-       
             // Detect red button press (false -> true)
             if (currentRedState && !lastRedState)
             {
@@ -59,7 +58,6 @@ public class TugOfWar
             // Update previous states
             lastRedState = currentRedState;
             lastGreenState = currentGreenState;
-
           
             // Check for winner
             if (countRed == 10 || countGreen == 10)
@@ -83,7 +81,8 @@ public class TugOfWar
                     Thread.sleep(500);
                 }
 
-                break; // End game
+                // End game
+                break; 
             }
         }
     }

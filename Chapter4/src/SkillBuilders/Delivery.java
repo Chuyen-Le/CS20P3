@@ -4,7 +4,6 @@ import java.util.Scanner;
 
 public class Delivery 
 {
-
 	public static void main(String[] args) 
 	{
 		// Ask the user about the size of a package
@@ -31,5 +30,4 @@ public class Delivery
 		
 		scanner.close();
 	}
-
 }
