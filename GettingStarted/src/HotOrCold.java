@@ -1,9 +1,10 @@
 //Add Phidgets Library | You added a file called phidget22 when configuring your project. Import gives you access to the Phidgets library code inside that file. 
 import com.phidget22.*;
 
-public class HotOrCold {
-    public static void main(String[] args) throws Exception{
-
+public class HotOrCold 
+{
+    public static void main(String[] args) throws Exception
+    {
         //Create | Here you've created a HumiditySensor and a TemperatureSensor object for your Humidity Phidget. This allows you to access both temperature and humidity data from your Phidget.
         TemperatureSensor temperatureSensor = new TemperatureSensor();
         
@@ -24,7 +25,8 @@ public class HotOrCold {
         greenLED.open(1000);
 
         //Use your Phidgets | This code will print humidity and temperature read by the sensor every 150ms.
-        while(true){
+        while (true)
+        {
         	double celDegree = temperatureSensor.getTemperature();
         	if (20 <= celDegree && celDegree <= 24)
         	{

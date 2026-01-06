@@ -80,6 +80,8 @@ public class TugOfWar
                     winnerLED.setState(false);
                     Thread.sleep(500);
                 }
+                
+                winnerLED.setState(false);
 
                 // End game
                 break; 

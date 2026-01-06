@@ -9,19 +9,22 @@ Every time the user presses the red button, decrease the set temperature by 1˚.
 Print the current temperature and set temperature to the screen every 10 seconds.
 If the current temperature is within 2˚ of the set temperature, turn on the green LED.
 If the current temperature is not within 2˚ of the set temperature, turn on the red LED.
- 
+ */
 
 //Add Phidgets Library | You added a file called phidget22 when configuring your project. Import gives you access to the Phidgets library code inside that file. 
+
+import com.phidget22.DigitalInput;
+import com.phidget22.DigitalOutput;
+import com.phidget22.TemperatureSensor;
 
 public class BuildAThermostat 
 {
     public static void main(String[] args) throws Exception
     {
-
-        //Create | Here you've created a HumiditySensor and a TemperatureSensor object for your Humidity Phidget. This allows you to access both temperature and humidity data from your Phidget.
+        //Create | Here you've created a HumiditySensor and a TemperatureSensor object for your Humidity Phidget. This allows you to access both temperature and humidity data from your Phidget.        
         TemperatureSensor temperatureSensor = new TemperatureSensor();
-        
-        DigitalInput redButton = new DigitalInput();
+
+    	DigitalInput redButton = new DigitalInput();
         DigitalOutput redLED = new DigitalOutput();
         DigitalInput greenButton = new DigitalInput();
         DigitalOutput greenLED = new DigitalOutput();
@@ -45,34 +48,58 @@ public class BuildAThermostat
         greenLED.open(1000);
 
         //Use your Phidgets | This code will print humidity and temperature read by the sensor every 150ms.
-        double setTemp = 21;
-        double curTemp = 21;
- 
-        while(true)
+        double setTemp = 21.0;
+        
+        boolean lastRed = false;
+        boolean lastGreen = false;
+
+        long lastPrintTime = 0;
+        
+        while (true) 
         {
-        	if(greenButton.getState())
-        	{
-                curTemp -= 1;
-        	}
-        	
-        	if(redButton.getState())
-        	{
-        		curTemp -= 1;
-        	}
-        	
-        	temp Temp = new temp(curTemp, setTemp);
-        	System.out.print(Temp);
-        	if (Math.abs(curTemp - setTemp) <= 2)
+            double curTemp = temperatureSensor.getTemperature();
+
+            boolean redNow = redButton.getState();
+            boolean greenNow = greenButton.getState();
+
+            // Button press detection
+            if (greenNow && !lastGreen) 
             {
-            	redLED.setState(true);
+                setTemp++;
             }
-            else
+
+            if (redNow && !lastRed) 
             {
-            	greenLED.setState(true);
+                setTemp--;
             }
+
+            lastGreen = greenNow;
+            lastRed = redNow;
+
+            // LED logic
+            if (Math.abs(curTemp - setTemp) <= 2) 
+            {
+                greenLED.setState(true);
+                redLED.setState(false);
+            } 
+            else 
+            {
+                greenLED.setState(false);
+                redLED.setState(true);
+            }
+            
+            if (System.currentTimeMillis() - lastPrintTime >= 10000) {
+                System.out.printf("Current Temp: %.2f °C%n", curTemp);
+                System.out.printf("Set Temp: %.2f °C%n", setTemp);
+                System.out.println("--------------------");
+                lastPrintTime = System.currentTimeMillis();
+            }
+
+            Thread.sleep(20);
         }
+
     }
 }
-*/
+
   
   
