@@ -57,7 +57,7 @@ public class BuildAThermostat
         
         while (true) 
         {
-            double curTemp = temperatureSensor.getTemperature();
+        	double curTemp = temperatureSensor.getTemperature();
 
             boolean redNow = redButton.getState();
             boolean greenNow = greenButton.getState();
