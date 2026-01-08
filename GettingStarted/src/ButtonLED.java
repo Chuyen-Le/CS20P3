@@ -1,32 +1,32 @@
-//Add Phidgets Library | You added a file called phidget22 when configuring your project. Import gives you access to the Phidgets library code inside that file. 
+//Add Phidgets Library
 import com.phidget22.*;
 
-public class TugOfWar 
-{
-    //Handle Exceptions | Exceptions will happen in your code from time to time. These are caused by unexpected things happening. Make sure you’ve added "throws Exception" to your main method.
-    public static void main(String[] args) throws Exception
+public class ButtonLED 
+{   
+    //Handle Exceptions
+    public static void main(String[] args) throws Exception 
     {
-        //Create | Create objects for your buttons and LEDs.
+        //Create
         DigitalInput redButton = new DigitalInput();
-        DigitalOutput redLED = new DigitalOutput();
         DigitalInput greenButton = new DigitalInput();
+        DigitalOutput redLED = new DigitalOutput();
         DigitalOutput greenLED = new DigitalOutput();
 
-        //Address | Address your four objects which lets your program know where to find them.
+        //Address
         redButton.setHubPort(0);
         redButton.setIsHubPortDevice(true);
-        redLED.setHubPort(1);
-        redLED.setIsHubPortDevice(true);
         greenButton.setHubPort(5);
         greenButton.setIsHubPortDevice(true);
+        redLED.setHubPort(1);
+        redLED.setIsHubPortDevice(true);
         greenLED.setHubPort(4);
         greenLED.setIsHubPortDevice(true);
 
-        //Open | Connect your program to your physical devices.
-        redButton.open(1000);
+        //Open
         redLED.open(1000);
-        greenButton.open(1000);
         greenLED.open(1000);
+        redButton.open(1000);
+        greenButton.open(1000);
 
         //Use your Phidgets | This code will turn on the LED when the matching button is pressed and turns off the LED when the matching button is released. The sleep function slows down the loop so the button state is only checked every 150ms.
         int countRed = 0;
@@ -46,6 +46,8 @@ public class TugOfWar
                 countRed++;
                 System.out.println("Red: " + countRed + " -- Green: " + countGreen);
             }
+            redLED.setState(currentRedState);
+            lastRedState = currentRedState;
             
             // Detect green button press (false -> true)
             if (currentGreenState && !lastGreenState)
@@ -53,15 +55,22 @@ public class TugOfWar
                 countGreen++;
                 System.out.println("Red: " + countRed + " -- Green: " + countGreen);
             }
-
-            // Update previous states
-            lastRedState = currentRedState;
+            greenLED.setState(currentGreenState);
             lastGreenState = currentGreenState;
           
             // Check for winner
             if (countRed == 10 || countGreen == 10)
             {
-                // Flash BOTH LEDs once
+            	if (countRed == 10)
+                {
+                	System.out.print("Red wins");
+                }
+                else
+                {
+                	System.out.print("Green wins");
+                }
+               
+            	// Flash BOTH LEDs once
                 redLED.setState(true);
                 greenLED.setState(true);
                 Thread.sleep(1000);
@@ -83,9 +92,12 @@ public class TugOfWar
                 winnerLED.setState(false);
 
                 // End game
-                break; 
+                break;
             }
+              
         }
+        redLED.close();
+        greenLED.close();
     }
 }
   
