@@ -39,7 +39,6 @@ public class Button
             }
         });
         
-        
         greenButton.addStateChangeListener(new DigitalInputStateChangeListener() 
         {
             public void onStateChange(DigitalInputStateChangeEvent e) 

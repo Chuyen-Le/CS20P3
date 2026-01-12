@@ -64,7 +64,6 @@ public class ButtonLED
             // Check for winner
             if (countRed == 10 || countGreen == 10)
             {
-            	
             	// Determine winner
             	DigitalOutput winnerLED = (countRed == 10) ? redLED : greenLED;
             	
