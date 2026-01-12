@@ -20,6 +20,7 @@ public class SmartPhiget
             }
         });
         
+        
         //Temperature Event |  Event code runs when data input from the sensor changes. The following event is a Temperature change event. The contained code will only run when the temperature input changes.
         temperatureSensor.addTemperatureChangeListener(new TemperatureSensorTemperatureChangeListener() 
         {

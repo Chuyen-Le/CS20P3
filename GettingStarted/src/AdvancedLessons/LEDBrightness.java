@@ -25,7 +25,7 @@ public class LEDBrightness
         	redLED.setDutyCycle(brigthness);
         	Thread.sleep(1000);
         }
-        	
+        
         for (int i = 10; i >= 0; i--)
         {
         	double brigthness = i * 0.1;

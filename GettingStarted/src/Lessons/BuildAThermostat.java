@@ -86,7 +86,7 @@ public class BuildAThermostat
                 greenLED.setState(true);
                 redLED.setState(false);
             } 
-            else 
+            else
             {
                 greenLED.setState(false);
                 redLED.setState(true);
