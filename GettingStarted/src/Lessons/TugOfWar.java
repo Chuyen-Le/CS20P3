@@ -66,6 +66,9 @@ public class TugOfWar
             // Check for winner
             if (countRed == 10 || countGreen == 10)
             {
+            	// Determine winner 
+            	DigitalOutput winnerLED = (countRed == 10) ? redLED : greenLED;
+            	
                 // Flash BOTH LEDs once
                 redLED.setState(true);
                 greenLED.setState(true);
@@ -75,8 +78,6 @@ public class TugOfWar
                 Thread.sleep(1000);
 
                 // Flash winner LED 5 times
-                DigitalOutput winnerLED = (countRed == 10) ? redLED : greenLED;
-
                 for (int i = 0; i < 5; i++)
                 {
                     winnerLED.setState(true);
@@ -92,6 +93,10 @@ public class TugOfWar
                 break; 
             }
         }
+        
+        // Close both red and green LED
+        redLED.close();
+        greenLED.close();
     }
 }
   

@@ -18,21 +18,22 @@ public class LEDBrightness
         //Open 
         redLED.open(1000);
 
-        //Use your Phidgets with Duty Cycle 
-        int brigthness = 1;
-        
-        while (brigthness < 10)
+        //Use your Phidgets with Duty Cycle
+        for (int i = 1; i <= 10; i++)
         {
-        	redLED.setDutyCycle((double) brigthness / 10);
+        	double brigthness = i * 0.1;
+        	redLED.setDutyCycle(brigthness);
         	Thread.sleep(1000);
-        	brigthness++;
         }
         
-        while (brigthness >= 0)
+        for (int i = 10; i >= 0; i--)
         {
-        	redLED.setDutyCycle((double) brigthness / 10);
+        	double brigthness = i * 0.1;
+        	redLED.setDutyCycle(brigthness);
         	Thread.sleep(1000);
-        	brigthness--;
         }
+        
+        // Close red LED
+        redLED.close();
     }
 }

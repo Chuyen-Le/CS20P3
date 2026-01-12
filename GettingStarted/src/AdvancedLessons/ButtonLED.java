@@ -34,36 +34,40 @@ public class ButtonLED
         int countRed = 0;
         int countGreen = 0;
         
-        boolean lastRedState = false;
-        boolean lastGreenState = false;
+        // Initial boolean of the state of red and green buttons
+        boolean LastRedState = false;
+        boolean LastGreenState = false;
 
         while (true)
         {
-            boolean currentRedState = redButton.getState();
-            boolean currentGreenState = greenButton.getState();
+        	boolean CurrentRedState = redButton.getState();
+            boolean CurrentGreenState = greenButton.getState();
 
             // Detect red button press (false -> true)
-            if (currentRedState && !lastRedState)
+            if (CurrentRedState && !LastRedState)
             {
                 countRed++;
                 System.out.println("Red: " + countRed + " -- Green: " + countGreen);
             }
-            redLED.setState(currentRedState);
-            lastRedState = currentRedState;
+            redLED.setState(CurrentRedState);
+            LastRedState = CurrentRedState;
             
             // Detect green button press (false -> true)
-            if (currentGreenState && !lastGreenState)
+            if (CurrentGreenState && !LastGreenState)
             {
                 countGreen++;
                 System.out.println("Red: " + countRed + " -- Green: " + countGreen);
             }
-            greenLED.setState(currentGreenState);
-            lastGreenState = currentGreenState;
+            greenLED.setState(CurrentGreenState);
+            LastGreenState = CurrentGreenState;
           
             // Check for winner
             if (countRed == 10 || countGreen == 10)
             {
-            	if (countRed == 10)
+            	// Determine winner
+            	DigitalOutput winnerLED = (countRed == 10) ? redLED : greenLED;
+            	
+            	if (winnerLED == redLED)
                 {
                 	System.out.print("Red wins");
                 }
@@ -81,8 +85,6 @@ public class ButtonLED
                 Thread.sleep(1000);
 
                 // Flash winner LED 5 times
-                DigitalOutput winnerLED = (countRed == 10) ? redLED : greenLED;
-
                 for (int i = 0; i < 5; i++)
                 {
                     winnerLED.setState(true);
@@ -91,13 +93,15 @@ public class ButtonLED
                     Thread.sleep(500);
                 }
                 
+                // Stop winner LED
                 winnerLED.setState(false);
 
                 // End game
                 break;
             }
-              
         }
+        
+        // Close both red and green LED
         redLED.close();
         greenLED.close();
     }

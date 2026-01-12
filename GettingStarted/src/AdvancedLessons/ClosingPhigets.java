@@ -1,7 +1,6 @@
 //Add Phidgets Library
 package AdvancedLessons;
 
-
 import com.phidget22.*;
 
 public class ClosingPhigets 
