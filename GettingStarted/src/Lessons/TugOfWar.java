@@ -91,7 +91,7 @@ public class TugOfWar
 
                 // End game
                 break; 
-            }
+            }	
         }
         
         // Close both red and green LED

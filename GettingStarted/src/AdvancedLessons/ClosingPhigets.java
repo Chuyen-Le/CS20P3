@@ -10,7 +10,7 @@ public class ClosingPhigets
         //Create
         TemperatureSensor temperatureSensor = new TemperatureSensor();
 
-        //Open
+        //Open	
         temperatureSensor.open(1000);
 
         //Use your Phidgets

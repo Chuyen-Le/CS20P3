@@ -36,7 +36,7 @@ public class HotOrCold
                 Thread.sleep(1000);
                 System.out.println("green - " + celDegree + " °C");
         	}
-        	else 
+        	else 	
         	{
         		redLED.setState(true);
                 Thread.sleep(1000);
