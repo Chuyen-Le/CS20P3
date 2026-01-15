@@ -1,6 +1,6 @@
-//Add Phidgets Library
 package AdvancedLessons;
 
+//Add Phidgets Library
 import com.phidget22.*;
 
 public class ClosingPhigets 
@@ -12,7 +12,7 @@ public class ClosingPhigets
 
         //Open
         temperatureSensor.open(1000);
-
+        
         //Use your Phidgets
         System.out.println("Temperature: " + temperatureSensor.getTemperature() + " °C" );
         

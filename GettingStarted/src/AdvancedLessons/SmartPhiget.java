@@ -1,6 +1,6 @@
-//Add Phidgets Library
 package AdvancedLessons;
 
+//Add Phidgets Library
 import com.phidget22.*;
 
 public class SmartPhiget 
@@ -40,7 +40,7 @@ public class SmartPhiget
         humiditySensor.open(1000);
         temperatureSensor.open(1000);
 
-        //Keep program running
+        // Keep program running
         while (true) 
         {
             Thread.sleep(150);

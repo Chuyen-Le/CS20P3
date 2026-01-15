@@ -11,9 +11,10 @@ If the current temperature is within 2˚ of the set temperature, turn on the gre
 If the current temperature is not within 2˚ of the set temperature, turn on the red LED.
  */
 
-//Add Phidgets Library | You added a file called phidget22 when configuring your project. Import gives you access to the Phidgets library code inside that file. 
+
 package Lessons;
 
+//Add Phidgets Library | You added a file called phidget22 when configuring your project. Import gives you access to the Phidgets library code inside that file. 
 import com.phidget22.DigitalInput;
 import com.phidget22.DigitalOutput;
 import com.phidget22.TemperatureSensor;

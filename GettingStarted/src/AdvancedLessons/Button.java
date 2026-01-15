@@ -1,6 +1,6 @@
-//Add Phidgets Library
 package AdvancedLessons;
 
+//Add Phidgets Library
 import com.phidget22.*;
 
 public class Button 
